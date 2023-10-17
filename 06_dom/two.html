@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black" >
+    <h2>
+        amazing buttons
+    </h2>
+
+    <ul id = "upper">
+        <li> <button  id = 'owl' style="background-color: red; color: white;">Tap red</button></li>
+        <li> <button style="background-color: blue; color: white;">Tap blue</button></li>
+        <li><button style="background-color: green; color: white;">Tap green</button></li>
+        <li><button style="background-color: violet; color: white;">Tap violet</button></li>
+        <li><button style="background-color: brown; color: white;">Tap brown</button></li>
+        <li><button style="background-color: rgb(66, 3, 3); color: white;">Tap mehroon</button></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('upper').addEventListener('click' , function(e){
+    //     console.log("Hi ul lover");
+    // },false)
+    
+    // document.getElementById('owl').addEventListener('click' , function(e){
+    //     console.log("Hi li lover");
+    //     //only li will be outputed
+    //     e.stopPropagation();
+    // },false)
+    document.querySelector('#upper').addEventListener('click' , function(e){
+        console.log(e.target.parentNode)
+        let parental = e.target.parentNode;
+        // parental.parentNode.removeChild(parental)
+
+        //li pe touch krnge to pura gayb
+        //tagname leke or if else lenge
+        
+        parental.remove();
+    },false)
+</script>
+</html>
