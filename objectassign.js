@@ -34,21 +34,23 @@
 // // console.log(obj3);
 
 
-const object1 = ({company}) => {
-    console.log(object1[company])
-}
-object1(company = "HCL");
+// const object1 = ({company}) => {
+//     console.log(object1[company])
+// }
+// object1(company = "HCL");
 
 
 
-const Students = {
-    strength:"80",
-    general :"40",
-    sc:"32",
-    kashmiri:"7"
-}
+// const Students = {
+//     strength:"80",
+//     general :"40",
+//     sc:"32",
+//     kashmiri:"7"
+// }
 
-const {kashmiri:gore} = Students
+// const {kashmiri:gore} = Students
 
 
-console.log(kashmiri);
+// console.log(kashmiri);
+
+console.log("react");
