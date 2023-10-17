@@ -1,0 +1,80 @@
+const { Console } = require("console");
+
+//condition lgani pdti hai
+const arr1 = [1 ,2 , 4, 7];
+const aru =[]
+arr1.forEach((item)=>{
+    if(item >= 2){
+        aru.push(item)
+    }
+})
+console.log(aru)
+
+
+//filtering in array
+//condition based hee hta h filter word 
+const value = arr1.filter((item)=>   item >= 2)
+console.log(value);
+
+//filter array of objects m kaam aata hai
+
+let cars = [
+    {
+      "color": "purple",
+      "type": "minivan",
+      "registration": new Date('2017-01-03'),
+      "capacity": 7
+    },
+    {
+      "color": "red",
+      "type": "station wagon",
+      "registration": new Date('2018-03-03'),
+      "capacity": 5
+    },
+    {
+      "color": "purple",
+      "type": "open car",
+      "registration": new Date('2018-03-03'),
+      "capacity": 2
+    }
+  ]
+
+//   const totalval = cars.reduce((acc,currval)=> acc+currval , currval.capacity)
+
+  const best = cars.filter((item) => item.capacity > 2)
+  console.log(best);
+
+
+  //map automatically returns
+  //mutiple chaining can be applied
+  //map means operations lgenge only
+  //filter mai bss true false k hisab se value aaengi //condition based
+
+  const arr4 = [1,2,3,4,5,6,7,8,9,10]
+  const ans = arr4.map((val)=> val*10).map((val)=>val+1).filter((val)=>val>100)
+  console.log(ans);
+
+
+  //reduce will add all values
+//   0 is given as its first value to accumlator as intialsation
+
+
+const arr6 = [1,2,3,4,5]
+let intialvalue = 0;
+const ans6 = arr6.reduce((acc,curr) => {
+    console.log(`acc value is ${acc} and curr vale is ${curr}`)
+    return acc+curr
+},intialvalue)
+
+
+
+  const arr5 = [1,2,3,4,5]
+  const ans2 = arr5.reduce((accumlator,currentvalue) => accumlator+currentvalue , 0)
+console.log(ans2);
+
+
+console.log("total seats available")
+
+//applied on array of objects
+const totalval = cars.reduce((acc,item)=> acc+item.capacity , 0)
+console.log(totalval);
